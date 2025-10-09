@@ -19,7 +19,6 @@ form.addEventListener("submit", async (e) => {
     });
   if (response.ok) {
       const userData = await response.json();
-      sessionStorage.setItem("userData", JSON.stringify(userData));
       window.location.href = "http://localhost:3000/index.html";
     }
   } catch (erro) {

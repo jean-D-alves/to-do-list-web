@@ -49,7 +49,7 @@ form.addEventListener("submit", async (e) => {
 function back() {
   div.innerHTML = `
     <button class="btn btn-outline-primary" type="button">
-      <a href="/index.html">voltar</a>
+      <a href="index.html">voltar</a>
     </button>`;
 }
 back();

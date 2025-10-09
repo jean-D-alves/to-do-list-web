@@ -151,10 +151,10 @@ function addBtnGrups() {
   const div = document.getElementById("btnGroupheader");
   div.innerHTML = `
         <button class="btn btn-primary">
-          <a class="dropdown-item" href="newtask.html">new task</a>
+          <a class="dropdown-item" href="/template/newtask.html">new task</a>
         </button>
         <button class="btn btn-primary">
-          <a class="dropdown-item" href="account.html">user data</a>
+          <a class="dropdown-item" href="/template/account.html">user data</a>
         </button>`;
 }
 addBtnGrups();
