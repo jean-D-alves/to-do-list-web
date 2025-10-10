@@ -1,3 +1,4 @@
+import { URL } from "../main";
 const form = document.getElementById("form");
 
 form.addEventListener("submit", async (e) => {
@@ -20,7 +21,7 @@ form.addEventListener("submit", async (e) => {
 
     if (response.ok) {
       const userData = await response.json();
-      window.location.href = "http://localhost:3000/index.html";
+      window.location.href = `${URL}`;
     }
   } catch (erro) {
     console.log("erro", erro);

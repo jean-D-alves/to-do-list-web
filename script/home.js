@@ -1,10 +1,13 @@
+
+
+import { URL } from "../main";
 const datatask = localStorage.getItem("datatask");
 const userDataString = sessionStorage.getItem("userData");
 const userData = userDataString ? JSON.parse(userDataString) : null;
 
 async function getUser() {
   if (!userData) {
-    window.location.href = "http://localhost:3000/template/loginPage.html";
+    window.location.href = `${URL}loginPage.html`;
   }
 }
 
@@ -55,7 +58,7 @@ async function getTasks() {
     table.innerHTML = htmlfalse + htmlTrue;
   } catch (err) {
     console.log(err, "erro");
-    window.location.href = "http://localhost:3000/template/loginPage.html";
+    window.location.href = `${URL}loginPage.html`;
   }
 }
 
