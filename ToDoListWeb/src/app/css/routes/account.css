@@ -1,0 +1,18 @@
+.account-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.account-container .account-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: baseline;
+  padding: 10px;
+  margin: 20px;
+}
+
+.account-container Sidebar {
+  width: 250px;
+}

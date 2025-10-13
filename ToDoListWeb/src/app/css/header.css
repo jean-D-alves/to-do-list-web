@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10px;
+  width: 100%;
+}
+#headerOptions{
+  display: flex;
+  gap: 20px;
+}
