@@ -1,0 +1,29 @@
+#ErrorDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#Erroricon {
+  width: 500px; 
+  margin-bottom: 20px;
+}
+
+#ErrorH1 {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #d3254bff;
+}
+
+#ErrorH2 {
+  font-size: 1.2rem;
+  color: #555;
+  cursor: pointer;
+}
+
+#ErrorH2:hover {
+  text-decoration: underline;
+}
