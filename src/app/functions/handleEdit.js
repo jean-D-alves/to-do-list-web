@@ -1,11 +1,10 @@
-import axios from "axios";
+import api from "./api";
 
 export async function handleEdit(id, newTitle, newDescription, setTasks) {
   try {
-    await axios.patch(
-      `http://localhost:5000/tasks/${id}`,
-      { title: newTitle, description: newDescription },
-      { withCredentials: true }
+    await api.patch(
+      `/tasks/${id}`,
+      { title: newTitle, description: newDescription }
     );
 
     setTasks(prev =>

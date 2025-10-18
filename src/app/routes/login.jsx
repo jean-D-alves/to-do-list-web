@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../functions/api.js";
 import { useState } from "react";
 import ButtonLink from "../components/buttonLink";
 import "../css//routes/login.css"
@@ -12,10 +12,9 @@ export default function Login() {
   async function singin(e) {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:5000/login",
-        { email: Email, password: Password },
-        { withCredentials: true }
+      const response = await api.post(
+        "/login",
+        { email: Email, password: Password }
       );
       navigate("/");
     } catch (error) {

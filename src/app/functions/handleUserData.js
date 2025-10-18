@@ -1,10 +1,8 @@
-import axios from "axios";
+import api from "./api";
 
 export async function handleUserData() {
   try {
-    const response = await axios.get(`http://localhost:5000/userData`, {
-      withCredentials: true,
-    });
+    const response = await api.get(`/userData`);
     return response.data
   } catch (error) {
     console.error("Erro ao deletar tarefa:", error);

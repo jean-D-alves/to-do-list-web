@@ -1,10 +1,9 @@
-import axios from "axios";
+import api from "./api";
 
 export async function handleDone(id, done, tasks, setTasks) {
-  const response = await axios.patch(
-    `http://localhost:5000/tasks/${id}`,
-    { done: done ? 0 : 1 },
-    { withCredentials: true }
+  const response = await api.patch(
+    `/tasks/${id}`,
+    { done: done ? 0 : 1 }
   );
   if (response.status === 200) {
     setTasks((prev) =>

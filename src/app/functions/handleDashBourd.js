@@ -1,8 +1,7 @@
-import axios from "axios";
+import api from "./api";
+
 
 export async function handleDashBourd() {
-  const response = await axios.get(`http://localhost:5000/dashboard`, {
-    withCredentials: true,
-  });
+  const response = await api.get(`/dashboard`);
   return response.data
 }

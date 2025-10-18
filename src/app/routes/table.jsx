@@ -1,5 +1,5 @@
 import "../css/routes/table.css";
-import useAuth from "../hook/useAuth"
+import useAuth from "../hook/useAuth";
 import Form from "../components/form";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { handleDone } from "../functions/handleDone";
 import { handleEdit } from "../functions/handleEdit";
 import { handleDelete } from "../functions/handleDelete";
-import axios from "axios";
+import api from "../functions/api";
 
 export default function Table() {
   useAuth();
@@ -21,9 +21,7 @@ export default function Table() {
   useEffect(() => {
     async function loadTasks() {
       try {
-        const response = await axios("http://localhost:5000/tasks", {
-          withCredentials: true,
-        });
+        const response = await api.get("/tasks");
         setTasks(response.data);
       } catch (error) {
         console.error("Erro ao buscar tarefas:", error);

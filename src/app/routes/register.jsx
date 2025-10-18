@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../functions/api.js";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css//routes/register.css"
@@ -13,15 +13,15 @@ export default function Register() {
   async function singup(e) {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:5000/users",
-        { name: username, email: Email, password: Password },
-        { withCredentials: true }
+      const response = await api.post(
+        "/users",
+        { name: username, email: Email, password: Password }
       );
       console.log(response.data.name, "resgister");
       navigate("/");
     } catch (error) {
       console.log("erro", error.message);
+      alert("error in sign up")
     }
   }
   const userForm = [

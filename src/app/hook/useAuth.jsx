@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../functions/api";
 
 export default function useAuth() {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/check-token", { withCredentials: true })
+    api
+      .get("/check-token")
       .then((res) => {
         setUser(res.data.user);
       })

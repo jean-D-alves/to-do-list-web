@@ -2,7 +2,7 @@ import { useState } from "react";
 import Form from "../components/form";
 import "../css/routes/newTasks.css"
 import useAuth from "../hook/useAuth";
-import axios from "axios";
+import api from "../functions/api.js";
 import { useNavigate } from "react-router-dom";
 
 export default function NewTask() {
@@ -13,10 +13,9 @@ export default function NewTask() {
   const now = new Date();
   const date = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`;
   async function newTask() {
-    const response = await axios.post(
-      "http://localhost:5000/tasks",
-      { title: title, description: description, date: date, done: 0 },
-      { withCredentials: true }
+    const response = await api.post(
+      "/tasks",
+      { title: title, description: description, date: date, done: 0 }
     );
     navigate("/")
   }

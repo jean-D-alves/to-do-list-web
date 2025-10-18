@@ -1,10 +1,8 @@
-import axios from "axios";
+import api from "./api";
 
 export async function handleDelete(id, setTasks) {
   try {
-    await axios.delete(`http://localhost:5000/tasks/${id}`, {
-      withCredentials: true,
-    });
+    await api.delete(`/tasks/${id}`);
     setTasks(prev => prev.filter(task => task.id !== id));
   } catch (error) {
     console.error("Erro ao deletar tarefa:", error);
