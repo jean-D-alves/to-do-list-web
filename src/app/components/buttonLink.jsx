@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function ButtonLink({ href, text }) {
   return (
-    <>
-      <a href={href}>{text}</a>
-    </>
+    <Link to={href} className="button-link">
+      {text}
+    </Link>
   );
 }
