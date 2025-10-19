@@ -82,7 +82,7 @@ export default function Table() {
                 >
                   <img
                     style={{ width: "20px" }}
-                    src="src/app/assets/verificar.svg"
+                    src="/verificar.svg"
                     alt="done"
                   />
                 </button>
@@ -98,7 +98,7 @@ export default function Table() {
                 >
                   <img
                     style={{ width: "20px" }}
-                    src="src/app/assets/lapis.svg"
+                    src="/lapis.svg"
                     alt="edit"
                   />
                 </button>
@@ -111,7 +111,7 @@ export default function Table() {
                 >
                   <img
                     style={{ width: "20px" }}
-                    src="src/app/assets/lixo.svg"
+                    src="/lixo.svg"
                     alt="delete"
                   />
                 </button>
