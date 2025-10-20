@@ -1,7 +1,7 @@
 
 ---
 
-### **README do Frontend (`README-frontend.md`)**
+### **README do Frontend **
 
 ```markdown
 # To-Do List Web (Frontend)
@@ -25,4 +25,4 @@ Este repositório contém apenas o **frontend** da aplicação To-Do List.
 ## Site Online
 
 A aplicação frontend está disponível em:  
-[https://to-do-list-web-chi.vercel.app/](https://to-do-list-web-chi.vercel.app/)
+[https://to-do-list-web-chi.vercel.app/]
